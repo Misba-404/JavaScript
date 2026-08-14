@@ -7,9 +7,18 @@
   </head>
   <body>
     <h1>Sales track</h1>
+    <p id="jsTotal"></p>
+    <p id="jsUpdate"></p>
     <script>
-      var tshirt = 400;
+      var tShirt = 400;
+      var tSold = 5;
       var cap = 150;
+      var cSold = 3;
+      var sum = (tShirt * tSold) + (cap * cSold);
+      document.getElementById("jsTotal").innerHTML = "Total Sales = " + sum;
+      var tShirt=450;
+      var sum = (tShirt * tSold) + (cap * cSold);
+      document.getElementById("jsUpdate").innerHTML=("Updated total= ")+ sum;
     </script>
   </body>
 </html>
