@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Bill</title>
+  </head>
+  <body>
+    <script>
+      let pRice = 100,
+        pSugar = 150,
+        pWheat = 70;
+      let qRice = 2,
+        qSugar = 1,
+        qWheat = 3;
+      let sum = pRice * qRice + pSugar * qSugar + pWheat * qWheat;
+      console.log("Rice - " + pRice * qRice);
+      console.log("Sugar - " + pSugar * qSugar);
+      console.log("Wheat - -" + pWheat * qWheat);
+      console.log("Grand total = " + sum);
+      qRice = 5;
+      sum = pRice * qRice + pSugar * qSugar + pWheat * qWheat;
+      console.log("Updated Grand total = " + sum);
+    </script>
+  </body>
+</html>
