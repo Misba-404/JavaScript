@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conatact Manager</title>
+  </head>
+  <body>
+    <p id="jsdemo"></p>
+    <script>
+      let contact1 = {
+        name: " Misbah ",
+        phone: "9188012431",
+        email: "misbah.in05@gmail.com",
+        getInfo: function () {
+          return this.name + " " + this.phone + " " + this.email;
+        },
+      };
+      let contact2 = {
+        name: " Minha ",
+        phone: "9495949594",
+        email: "minha@gmail.com",
+        getInfo: function () {
+          return this.name + " " + this.phone + " " + this.email;
+        },
+      };
+      function printContactInfo(contact) {
+        // document.getElementById("jsdemo").innerHTML = contact.getInfo();
+        document.getElementById("jsdemo").innerHTML += contact.getInfo();
+      }
+      printContactInfo(contact1);
+      printContactInfo(contact2);
+    </script>
+  </body>
+</html>
