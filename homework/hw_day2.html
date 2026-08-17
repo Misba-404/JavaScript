@@ -8,6 +8,7 @@
   <body>
     <p id="jsdemo"></p>
     <script>
+      
       let contact1 = {
         name: " Misbah ",
         phone: "9188012431",
@@ -25,8 +26,8 @@
         },
       };
       function printContactInfo(contact) {
-        // document.getElementById("jsdemo").innerHTML = contact.getInfo();
-        document.getElementById("jsdemo").innerHTML += contact.getInfo();
+        document.getElementById("jsdemo").innerHTML +=
+          contact.getInfo() + "<br>";
       }
       printContactInfo(contact1);
       printContactInfo(contact2);
