@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback form</title>
+  </head>
+  <body>
+    <button type="submit" onclick="">submit</button>
+    <p id="position"></p>
+    <p id="formatted"></p>
+    <script>
+      var feedback = "   I loved the FOOD and the service!   ";
+      var trim = feedback.trim();
+      var lower = trim.toLowerCase();
+      var replace = lower.replace("food", "ambience");
+      var pos = replace.indexOf("service");
+      //   console.log(`The Position of \"service\" is at ${pos}`);
+      document.getElementById("position").innerHTML =
+        `The Position of \"service\" is at ${pos}`;
+        
+    </script>
+  </body>
+</html>
