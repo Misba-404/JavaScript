@@ -10,7 +10,7 @@
     <p id="position"></p>
     <p id="last"></p>
     <script>
-          function feedbackProcess(){
+      function feedbackProcess() {
         var feedback = "   I loved the FOOD and the service!   ";
         var trim = feedback.trim();
         var lower = trim.toLowerCase();
@@ -20,9 +20,9 @@
         document.getElementById("position").innerHTML =
           `The Position of \"service\" is at ${pos}`;
         var final = replace.split(" ");
-      //   console.log(`this is replace :${final} \n and this is final: ${final}`);
-      document.getElementById("last").innerHTML=final;
-          }
+        //   console.log(`this is replace :${final} \n and this is final: ${final}`);
+        document.getElementById("last").innerHTML = final;
+      }
     </script>
   </body>
 </html>
