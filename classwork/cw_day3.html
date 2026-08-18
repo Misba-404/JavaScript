@@ -6,19 +6,23 @@
     <title>Feedback form</title>
   </head>
   <body>
-    <button type="submit" onclick="">submit</button>
+    <button type="button" onclick="feedbackProcess()">submit</button>
     <p id="position"></p>
-    <p id="formatted"></p>
+    <p id="last"></p>
     <script>
-      var feedback = "   I loved the FOOD and the service!   ";
-      var trim = feedback.trim();
-      var lower = trim.toLowerCase();
-      var replace = lower.replace("food", "ambience");
-      var pos = replace.indexOf("service");
-      //   console.log(`The Position of \"service\" is at ${pos}`);
-      document.getElementById("position").innerHTML =
-        `The Position of \"service\" is at ${pos}`;
-        
+          function feedbackProcess(){
+        var feedback = "   I loved the FOOD and the service!   ";
+        var trim = feedback.trim();
+        var lower = trim.toLowerCase();
+        var replace = lower.replace("food", "ambience");
+        var pos = replace.indexOf("service");
+        //   console.log(`The Position of \"service\" is at ${pos}`);
+        document.getElementById("position").innerHTML =
+          `The Position of \"service\" is at ${pos}`;
+        var final = replace.split(" ");
+      //   console.log(`this is replace :${final} \n and this is final: ${final}`);
+      document.getElementById("last").innerHTML=final;
+          }
     </script>
   </body>
 </html>
