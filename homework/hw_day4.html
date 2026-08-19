@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game result generator</title>
+  </head>
+  <body>
+    <p id="user_input"></p>
+    <p id="mystery_level"></p>
+    <p id="diff"></p>
+    <p id="sqrt"></p>
+    <p id="pi_value"></p>
+    <p id="impli_con"></p>
+    <p id="max_min"></p>
+    <script>
+      function mysteryLevel() {
+        return Math.floor(Math.random() * 50) + 1;
+      }
+      let userString = "1";
+      let convertedInput = Number(userString);
+      let numRandom = mysteryLevel();
+      let difference = Math.abs(numRandom - convertedInput);
+      let sqrtInput = Math.sqrt(convertedInput);
+      let piValue = Math.PI;
+      let impliConvert = "20" * 5;
+      let maxValue = Math.max(10, 20, numRandom);
+      let minValue = Math.min(10, 20, numRandom);
+
+      document.getElementById("user_input").innerHTML =
+        `User input : ${convertedInput}`;
+
+      document.getElementById("mystery_level").innerHTML =
+        `Random Mystery level : ${numRandom}`;
+
+      document.getElementById("diff").innerHTML =
+        `Difference between numbers : ${difference}`;
+
+      document.getElementById("sqrt").innerHTML = `Square root : ${sqrtInput}`;
+
+      document.getElementById("pi_value").innerHTML =
+        `Value of Pi : ${piValue}`;
+
+      document.getElementById("impli_con").innerHTML =
+        `Implicit convert 20*5 gives (${impliConvert} type=${typeof impliConvert})`;
+
+      document.getElementById("max_min").innerHTML =
+        `Highest value (max) : ${maxValue} <br> 
+      Lowest value (min) : ${minValue}`;
+    </script>
+  </body>
+</html>
