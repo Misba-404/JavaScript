@@ -20,7 +20,7 @@
       let numRandom = displayRandom();
       let numConvert = Number(userScore);
       let difference = Math.abs(numRandom - numConvert);
-      let sqrtRounded = Math.round(Math.sqrt(userScore));
+      let sqrtRounded = Math.round(Math.sqrt(numConvert));
       let stringToNumber = "50" * 2;
 
       document.getElementById("js1").innerHTML =
@@ -32,7 +32,8 @@
         ` Rounded Square root of user score : ${sqrtRounded}`;
       document.getElementById("js5").innerHTML = `Value of Pi : ${Math.PI}`;
       document.getElementById("js6").innerHTML =
-        `The datatype of \"stringToNumber\" variable is ${typeof stringToNumber}`;
+        ` "50" * 20 is ${stringToNumber} <br>
+        The datatype of \"stringToNumber\"  is ${typeof stringToNumber}`;
     </script>
   </body>
 </html>
