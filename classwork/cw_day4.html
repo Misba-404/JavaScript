@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics widget</title>
+  </head>
+  <body>
+    <p id="js1"></p>
+    <p id="js2"></p>
+    <p id="js3"></p>
+    <p id="js4"></p>
+    <p id="js5"></p>
+    <p id="js6"></p>
+    <script>
+      function displayRandom() {
+        return Math.floor(Math.random() * 100) + 1;
+      }
+      let userScore = "75";
+      let numRandom = displayRandom();
+      let numConvert = Number(userScore);
+      let difference = Math.abs(numRandom - numConvert);
+      let sqrtRounded = Math.round(Math.sqrt(userScore));
+      let stringToNumber = "50" * 2;
+
+      document.getElementById("js1").innerHTML =
+        `Random number generated : ${numRandom} `;
+      document.getElementById("js2").innerHTML = `User score : ${numConvert}`;
+      document.getElementById("js3").innerHTML =
+        `Difference between numbers : ${difference}`;
+      document.getElementById("js4").innerHTML =
+        ` Rounded Square root of user score : ${sqrtRounded}`;
+      document.getElementById("js5").innerHTML = `Value of Pi : ${Math.PI}`;
+      document.getElementById("js6").innerHTML =
+        `The datatype of \"stringToNumber\" variable is ${typeof stringToNumber}`;
+    </script>
+  </body>
+</html>
