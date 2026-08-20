@@ -13,14 +13,14 @@
     <script>
       let order = {
         itemName: "headPhone",
-        isDelivered: true, //mistake . refer laast
+        isDelivered: true, //mistake 1. refer laast
         daysSinceDelivery: 5,
       };
       let eligiblePeriod = order.daysSinceDelivery <= 7;
       let isDelivered = order.isDelivered;
 
       let eligibleReturn =
-        eligiblePeriod == isDelivered
+        eligiblePeriod == isDelivered //mistake 
           ? "Eligible for return"
           : "Return period expired";
       let nameToBoolean = Boolean(order.itemName);
