@@ -1,11 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile page</title>
+  </head>
+  <body>
+    <p id="ageOutput"></p>
+    <p id="acccessOutput"></p>
+    <p id="checkAgeOutput"></p>
+    <button id="button">Button</button>
+    <script>
+      let button = document.getElementById("button");
+      let profile = {
+        name: "John",
+        age: 19,
+      };
+      let isAdmin = true;
+      let age = profile.age;
+      console.log("Age: " + age);
+
+      let checkAdult = age >= 18;
+
+      let accessStatement =
+        checkAdult && isAdmin ? "Access Granted" : "Access Denied"; //Access Granted
+      console.log(accessStatement);
+
+      let checkAgeExist = "age" in profile;
+      console.log("Check 'age in profile: '" + checkAgeExist);
+
+      button.addEventListener("click", function displayResult() {
+        document.getElementById("ageOutput").innerHTML = `User age: ${age}`;
+        document.getElementById("acccessOutput").innerHTML =
+          `${accessStatement}`;
+        document.getElementById("checkAgeOutput").innerHTML =
+          `check "age" in profile: ${checkAgeExist} `;
+      });
+      delete profile.age;
+      console.log(profile);
+    </script>
+  </body>
 </html>
