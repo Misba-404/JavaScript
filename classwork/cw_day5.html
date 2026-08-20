@@ -13,18 +13,18 @@
     <script>
       let order = {
         itemName: "headPhone",
-        isDelivered: true, //mistake 1. refer laast
+        isDelivered: true,
         daysSinceDelivery: 5,
       };
       let eligiblePeriod = order.daysSinceDelivery <= 7;
       let isDelivered = order.isDelivered;
 
-      let eligibleReturn = eligiblePeriod && isDelivered;
+      let eligibleReturn = eligiblePeriod && isDelivered; //And
       let returnStatement = eligibleReturn
         ? "Eligible for return"
         : "Return period expired";
-      let nameToBoolean = Boolean(order.itemName);
-      let checkNameExist = order.itemName in order;
+
+      let checkNameExist = "itemName" in order;
 
       function displayResult() {
         document.getElementById("displayResultOutput").innerHTML =
