@@ -20,14 +20,11 @@
       let isDelivered = order.isDelivered;
 
       let eligibleReturn =
-        eligiblePeriod == isDelivered //mistake 
+        eligiblePeriod == isDelivered //mistake
           ? "Eligible for return"
           : "Return period expired";
       let nameToBoolean = Boolean(order.itemName);
-      let checkNameExist =
-        nameToBoolean == true
-          ? "Name property exist in the object"
-          : "name property is missing in the object";
+      let checkNameExist = order.itemName in order;
 
       function displayResult() {
         document.getElementById("displayResultOutput").innerHTML =
@@ -35,8 +32,8 @@
         console.log(eligibleReturn);
 
         document.getElementById("checkNameExistOutput").innerHTML =
-          checkNameExist;
-        console.log(checkNameExist);
+          "check itemName exist : " + checkNameExist;
+        console.log("check itemName exist : " + checkNameExist);
 
         delete order.daysSinceDelivery;
         console.log(order);
