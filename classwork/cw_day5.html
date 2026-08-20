@@ -19,17 +19,17 @@
       let eligiblePeriod = order.daysSinceDelivery <= 7;
       let isDelivered = order.isDelivered;
 
-      let eligibleReturn =
-        eligiblePeriod == isDelivered //mistake
-          ? "Eligible for return"
-          : "Return period expired";
+      let eligibleReturn = eligiblePeriod && isDelivered;
+      let returnStatement = eligibleReturn
+        ? "Eligible for return"
+        : "Return period expired";
       let nameToBoolean = Boolean(order.itemName);
       let checkNameExist = order.itemName in order;
 
       function displayResult() {
         document.getElementById("displayResultOutput").innerHTML =
-          eligibleReturn;
-        console.log(eligibleReturn);
+          returnStatement;
+        console.log(returnStatement);
 
         document.getElementById("checkNameExistOutput").innerHTML =
           "check itemName exist : " + checkNameExist;
@@ -40,6 +40,7 @@
         document.getElementById("deletedPropertyOutput").innerHTML =
           'Property "daysSinceDelivery" is deleted';
       }
+      displayResult();
     </script>
   </body>
 </html>
