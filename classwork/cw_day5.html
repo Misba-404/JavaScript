@@ -7,6 +7,8 @@
   </head>
   <body>
     <p id="displayResultOutput"></p>
+    <p id="checkNameExistOutput"></p>
+    <p id="deletedPropertyOutput"></p>
     <button onclick="displayResult()">Button</button>
     <script>
       let order = {
@@ -21,17 +23,25 @@
         eligiblePeriod == isDelivered
           ? "Eligible for return"
           : "Return period expired";
-      console.log(eligibleReturn);
       let nameToBoolean = Boolean(order.itemName);
       let checkNameExist =
-        (nameToBoolean == true)
+        nameToBoolean == true
           ? "Name property exist in the object"
           : "name property is missing in the object";
-      
 
       function displayResult() {
         document.getElementById("displayResultOutput").innerHTML =
           eligibleReturn;
+        console.log(eligibleReturn);
+
+        document.getElementById("checkNameExistOutput").innerHTML =
+          checkNameExist;
+        console.log(checkNameExist);
+
+        delete order.daysSinceDelivery;
+        console.log(order);
+        document.getElementById("deletedPropertyOutput").innerHTML =
+          'Property "daysSinceDelivery" is deleted';
       }
     </script>
   </body>
