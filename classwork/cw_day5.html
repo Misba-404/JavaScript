@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item return page</title>
+  </head>
+  <body>
+    <p id="displayResultOutput"></p>
+    <button onclick="displayResult()">Button</button>
+    <script>
+      let order = {
+        itemName: "headPhone",
+        isDelivered: true,
+        daysSinceDelivery: 5,
+      };
+      let eligiblePeriod = order.daysSinceDelivery <= 7;
+      let isDelivered = order.isDelivered;
+
+      let eligibleReturn =
+        eligiblePeriod == isDelivered
+          ? "Eligible for return"
+          : "Return period expired";
+      console.log(eligibleReturn);
+      let nameToBoolean = Boolean(order.itemName);
+      let checkNameExist =
+        (nameToBoolean == true)
+          ? "Name property exist in the object"
+          : "name property is missing in the object";
+      
+
+      function displayResult() {
+        document.getElementById("displayResultOutput").innerHTML =
+          eligibleReturn;
+      }
+    </script>
+  </body>
+</html>
