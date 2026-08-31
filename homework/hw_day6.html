@@ -17,18 +17,16 @@
         { name: "hari", score: 95 },
       ];
 
-      let names=student.map(nameOnly)
-      function nameOnly(person){
-        return person.name
+      let names = student.map(nameOnly);
+      function nameOnly(person) {
+        return person.name;
       }
-      document.getElementById("name").innerHTML=names
-    //   console.log(names);
-      
-      
-    //   let studentName=student.map(function mapFn(value){
-    //     return student
-    //   })
-      
+      document.getElementById("name").innerHTML = "Student Names: " + names;
+
+      let above60=student.filter(fltr)
+      function fltr(value){
+        return value.score>60
+      }
     </script>
   </body>
 </html>
