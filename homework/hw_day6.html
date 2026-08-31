@@ -29,7 +29,7 @@
       function nameOnly(person) {
         return person.name;
       }
-      document.getElementById("name").innerHTML = names;
+      document.getElementById("name").innerHTML = names.join(", ");
       //   Filter above60
       let above60 = student.filter(fltr);
       function fltr(value) {
@@ -39,7 +39,7 @@
 
       console.log(above60);
 
-      document.getElementById("above60").innerHTML = above60;
+      document.getElementById("above60").innerHTML = above60.join(", ");
 
       //   Total
       let totalScore = student.reduce(totFn, 0);
