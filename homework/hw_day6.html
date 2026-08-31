@@ -6,8 +6,11 @@
     <title>Student Result Dashboard</title>
   </head>
   <body>
+    <h3>Student Names</h3>
     <p id="name">display name</p>
+    <h3>Students with Score above 60</h3>
     <p id="above60"></p>
+    <p id="total"></p>
     <script>
       let student = [
         { name: "jonathan", score: 85 },
@@ -17,13 +20,13 @@
         { name: "suraj", score: 25 },
         { name: "hari", score: 95 },
       ];
-
+      // Name
       let names = student.map(nameOnly);
       function nameOnly(person) {
         return person.name;
       }
-      document.getElementById("name").innerHTML = "Student Names: " + names;
-
+      document.getElementById("name").innerHTML = names;
+      //   Filter above60
       let above60 = student.filter(fltr);
       function fltr(value) {
         return value.score > 60;
@@ -32,7 +35,14 @@
 
       console.log(above60);
 
-      document.getElementById("above60").innerHTML = "Students with score above 60: "+above60;
+      document.getElementById("above60").innerHTML = above60;
+
+      let totalScore = student.reduce(totFn, 0);
+      function totFn(total, value) {
+        return total + value.score;
+      }
+      document.getElementById("total").innerHTML = "Total Score: " + totalScore;
+      console.log(totalScore);
     </script>
   </body>
 </html>
