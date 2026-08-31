@@ -64,12 +64,18 @@
       }
       document.getElementById("atleast").innerHTML =
         "Atleast 1 student scored more than 90: " + atleast;
-    //   Sort
-    let sorted=student.sort(sortDescend)
-    function sortDescend(a,b){
-        return b.score-a.score
-    }
-    document.getElementById("sortedOut").innerHTML=sorted
+      //   Sort
+      let sorted = student.sort(sortDescend);
+      function sortDescend(a, b) {
+        return b.score - a.score;
+      }
+
+      function displayStudent(value) {
+        return value.name + " - " + value.score;
+      }
+      sorted=sorted.map(displayStudent)
+
+      document.getElementById("sortedOut").innerHTML=sorted.join("<br>")
     </script>
   </body>
 </html>
