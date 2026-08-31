@@ -25,7 +25,7 @@
       document.getElementById("demo").innerHTML = txt;
 
       function over50(value) {
-        price = Number(value.split("Price:")[1]);
+        let price = Number(value.split("Price:")[1]);
         return price > 50;
       }
 
@@ -34,7 +34,7 @@
       }
 
       productArray.push("Product:Watermelon-Price:80");
-      productArray.forEach(displayFn);
+      // productArray.forEach(displayFn);
 
       productArray.forEach(displayFn2);
       document.getElementById("demo2").innerHTML = updatedProducts;
