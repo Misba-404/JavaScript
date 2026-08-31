@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Tracker</title>
+  </head>
+  <body>
+    <p id="splitYear"></p>
+    <p id="splitDate2"></p>
+    <p id="splitDate3"></p>
+    <script>
+      let friend = {
+        name: "Misbah",
+        birthDate: "2005-01-28",
+      };
+
+      function getBirthdayDetials(value) {
+        let bornDate = new Date(friend.birthDate);
+        document.getElementById("splitYear").innerHTML =
+          "Year: " + bornDate.getFullYear();
+        let monthName = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        
+        document.getElementById("splitDate2").innerHTML =
+          "Month: " + bornDate.getMonth();
+        document.getElementById("splitDate3").innerHTML =
+          "Day: " + bornDate.getDay();
+      }
+      getBirthdayDetials(friend);
+    </script>
+  </body>
+</html>
