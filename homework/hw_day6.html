@@ -7,6 +7,7 @@
   </head>
   <body>
     <p id="name">display name</p>
+    <p id="above60"></p>
     <script>
       let student = [
         { name: "jonathan", score: 85 },
@@ -23,10 +24,15 @@
       }
       document.getElementById("name").innerHTML = "Student Names: " + names;
 
-      let above60=student.filter(fltr)
-      function fltr(value){
-        return value.score>60
+      let above60 = student.filter(fltr);
+      function fltr(value) {
+        return value.score > 60;
       }
+      above60 = above60.map(nameOnly);
+
+      console.log(above60);
+
+      document.getElementById("above60").innerHTML = "Students with score above 60: "+above60;
     </script>
   </body>
 </html>
