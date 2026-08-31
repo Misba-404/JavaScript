@@ -13,6 +13,8 @@
     <p id="total"></p>
     <p id="pass"></p>
     <p id="atleast"></p>
+    <h3>Score sorted list Descening</h3>
+    <p id="sortedOut"></p>
     <script>
       let student = [
         { name: "jonathan", score: 85 },
@@ -62,7 +64,12 @@
       }
       document.getElementById("atleast").innerHTML =
         "Atleast 1 student scored more than 90: " + atleast;
-
+    //   Sort
+    let sorted=student.sort(sortDescend)
+    function sortDescend(a,b){
+        return b.score-a.score
+    }
+    document.getElementById("sortedOut").innerHTML=sorted
     </script>
   </body>
 </html>
