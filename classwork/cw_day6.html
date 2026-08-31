@@ -6,10 +6,14 @@
     <title>Grocery store</title>
   </head>
   <body>
+    <h3>Products with price greater than 50</h3>
     <p id="demo"></p>
+
+    <h3>Updated Product List</h3>
     <p id="demo2"></p>
     <script>
       let txt = "";
+      let updatedProducts="";
       let productArray = [
         "Product:Apple-Price:50",
         "Product:Orange-Price:60",
@@ -17,18 +21,32 @@
         "Product:Peach-Price:70",
       ];
       let filtered = productArray.filter(over50);
+      filtered.forEach(displayFn);
+      document.getElementById("demo").innerHTML = txt;
 
+      
+
+      //extract price
       function over50(value) {
         price = Number(value.split("Price:")[1]);
         return price > 50;
       }
-      
 
-      document.getElementById("demo").innerHTML = filtered.join("<br>");
+      // display1
+      function displayFn(value) {
+        txt = txt + value + "<br>";
+      }
 
       productArray.push("Product:Watermelon-Price:80");
-      console.log(productArray);  
-      document.getElementById("demo2").innerHTML = productArray.join("<br>");
+      productArray.forEach(displayFn);
+
+      productArray.forEach(displayFn2);
+      document.getElementById("demo2").innerHTML = updatedProducts;
+
+      // display2
+      function displayFn2(value) {
+        updatedProducts =updatedProducts+ value + "<br>";
+      }
     </script>
   </body>
 </html>
