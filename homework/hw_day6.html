@@ -11,6 +11,8 @@
     <h3>Students with Score above 60</h3>
     <p id="above60"></p>
     <p id="total"></p>
+    <p id="pass"></p>
+    <p id="atleast"></p>
     <script>
       let student = [
         { name: "jonathan", score: 85 },
@@ -37,12 +39,31 @@
 
       document.getElementById("above60").innerHTML = above60;
 
+      //   Total
       let totalScore = student.reduce(totFn, 0);
       function totFn(total, value) {
         return total + value.score;
       }
       document.getElementById("total").innerHTML = "Total Score: " + totalScore;
       console.log(totalScore);
+
+      //   Pass
+      let passStatus = student.every(checkPassed);
+      function checkPassed(value) {
+        return value.score > 35;
+      }
+      document.getElementById("pass").innerHTML =
+        "Every student pass: " + passStatus;
+
+      // Atlest
+      let atleast = student.some(atleastOne);
+      function atleastOne(value) {
+        return value.score > 90;
+      }
+      document.getElementById("atleast").innerHTML =
+        "Atleast 1 student scored more than 90: " + atleast;
+      console.log(`atlest ${atleast}`);
+
     </script>
   </body>
 </html>
