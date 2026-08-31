@@ -16,10 +16,10 @@
       };
 
       function getBirthdayDetials(value) {
-        let bornDate = new Date(friend.birthDate);
+        let bornDate = new Date(value.birthDate);
         document.getElementById("splitYear").innerHTML =
           "Year: " + bornDate.getFullYear();
-        let monthName = [
+        const monthName = [
           "January",
           "February",
           "March",
@@ -33,11 +33,23 @@
           "November",
           "December",
         ];
+        const weekDay = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
 
         document.getElementById("splitDate2").innerHTML =
           "Month: " + monthName[bornDate.getMonth()];
         document.getElementById("splitDate3").innerHTML =
-          "Day: " + bornDate.getDay();
+          "Day: " + weekDay[bornDate.getDay()];
+        let today = new Date();
+        let age = today.getFullYear() - bornDate.getFullYear();
+        console.log(age);
       }
       getBirthdayDetials(friend);
     </script>
