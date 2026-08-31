@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Result Dashboard</title>
+  </head>
+  <body>
+    <p id="name">display name</p>
+    <script>
+      let student = [
+        { name: "jonathan", score: 85 },
+        { name: "alan", score: 40 },
+        { name: "askhay", score: 10 },
+        { name: "abhishek", score: 70 },
+        { name: "suraj", score: 25 },
+        { name: "hari", score: 95 },
+      ];
+
+      let names=student.map(nameOnly)
+      function nameOnly(person){
+        return person.name
+      }
+      document.getElementById("name").innerHTML=names.join("<br>")
+    //   console.log(names);
+      
+      
+    //   let studentName=student.map(function mapFn(value){
+    //     return student
+    //   })
+      
+    </script>
+  </body>
+</html>
