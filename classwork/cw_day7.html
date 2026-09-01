@@ -52,7 +52,16 @@
         let age = today.getFullYear() - bornDate.getFullYear();
         console.log(age);
         document.getElementById("age").innerHTML =
-          friend.name + " was born on  " + 
+          friend.name +
+          " was born on  " +
+          bornDate.getDate() +
+          " " +
+          monthName[bornDate.getMonth()] +
+          ", " +
+          bornDate.getFullYear() +
+          " and is " +
+          age +
+          " years old";
       }
       getBirthdayDetials(friend);
     </script>
