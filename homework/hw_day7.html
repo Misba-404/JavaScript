@@ -9,12 +9,16 @@
     <form>
       <label for="pastDate">Enter Your Past Bday Date: </label>
       <input type="date" id="pastDate" />
+      <button id="button"></button>
       <p id="displayOut"></p>
     </form>
     <script>
-      let eventDate = document.getElementById("pastDate").value;
-      eventDate = new Date(eventDate);
-      console.log(eventDate);
+        button=document.getElementById("button");
+
+        button.addEventListener
+      let eventDateString = document.getElementById("pastDate").value;
+      eventDate = new Date(eventDateString);
+      console.log(eventDate.get);
       const months = [
         "January",
         "February",
@@ -29,9 +33,24 @@
         "November",
         "December",
       ];
+      const weekDay = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      //   let displayYear=eventDate.getFullYear()
       console.log(months.length);
-      
-      
+      document.getElementById("displayOut").innerHTML =
+        "Your Entered Date is : " +
+        eventDate.getFullYear() +
+        " " +
+        months[eventDate.getMonth()] +
+        " " +
+        weekDay[eventDate.getDay()];
     </script>
   </body>
 </html>
