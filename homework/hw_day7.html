@@ -11,6 +11,7 @@
       <input type="date" id="pastDate" />
       <button id="button" type="button">submit</button>
       <p id="displayOut"></p>
+      <p id="message"></p>
     </form>
     <script>
       let button = document.getElementById("button");
@@ -55,8 +56,12 @@
         let today = new Date();
         let yearDifference = today.getFullYear() - eventDate.getFullYear();
         console.log(yearDifference);
-        
-        
+
+        let customMessage =
+          yearDifference > 1
+            ? "It has been more than a year since that date"
+            : "It has been less than a year since that date.";
+        document.getElementById("message").innerHTML = customMessage;
 
         //
       });
