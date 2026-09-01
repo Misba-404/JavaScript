@@ -9,6 +9,7 @@
     <p id="splitYear"></p>
     <p id="splitDate2"></p>
     <p id="splitDate3"></p>
+    <p id="age"></p>
     <script>
       let friend = {
         name: "Misbah",
@@ -50,6 +51,8 @@
         let today = new Date();
         let age = today.getFullYear() - bornDate.getFullYear();
         console.log(age);
+        document.getElementById("age").innerHTML =
+          friend.name + " was born on  " + 
       }
       getBirthdayDetials(friend);
     </script>
