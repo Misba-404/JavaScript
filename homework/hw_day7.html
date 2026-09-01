@@ -1,17 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Reminder</title>
-</head>
-<body>
-    <form >
-        <label for="pastDate">Enter Your Past Bday Date: </label>
-        <input type="date" id="pastDate">
+  </head>
+  <body>
+    <form>
+      <label for="pastDate">Enter Your Past Bday Date: </label>
+      <input type="date" id="pastDate" />
+      <p id="displayOut"></p>
     </form>
     <script>
-
+      let eventDate = document.getElementById("pastDate").value;
+      eventDate = new Date(eventDate);
+      console.log(eventDate);
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      console.log(months.length);
+      
+      
     </script>
-</body>
+  </body>
 </html>
