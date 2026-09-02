@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Calculator</title>
   </head>
-
+  <p ></p>
   <body>
     <script>
       let product;
@@ -38,17 +38,17 @@
             console.log("Invalid code");
             continue;
         }
-        price = price * quantity;
-        totalPrice += price;
+        itemTotal = price * quantity;
+        totalPrice += itemTotal;
         console.log("Total Price :" + totalPrice);
 
         validPurchase += 1;
         // console.log("after purchase" + validPurchase);
       }
       if (totalPrice > 100) {
-        console.log("High price");
+        console.log("High purchase");
       } else {
-        console.log("Low Price");
+        console.log("Low Low purchase");
       }
     </script>
   </body>
