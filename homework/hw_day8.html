@@ -8,9 +8,26 @@
   <body>
     <script>
       let chance = 5;
-      for (i = 0; i < chance; i++) {
+      for (let i = 0; i < chance; i++) {
         let guessNumber = parseInt(prompt("Enter a number between (1-5) "));
-        if (guessNumber <= 5) {
+        if (guessNumber <= 5 && guessNumber >= 1) {
+          switch (guessNumber) {
+            case 1:
+              console.log("You entered One");
+              break;
+            case 2:
+              console.log("You entered Two");
+              break;
+            case 3:
+              console.log("You entered Three");
+            case 4:
+              console.log("You entered Four");
+            case 5:
+              console.log("You entered Five");
+            default:
+              console.log("Unknown Errorrr");
+          }
+
           if (guessNumber == 3) {
             console.log("You guessed it right");
             break;
@@ -19,10 +36,13 @@
           }
         } else {
           console.log("invalid Input");
+          continue;
         }
-      }
-      if (chance == 6 && guessNumber != 3) {
-        console.log("GAME OVER");
+
+        console.log(i);
+        if (i == 4 && guessNumber != 3) {
+          console.log("GAME OVER");
+        }
       }
     </script>
   </body>
