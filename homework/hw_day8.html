@@ -1,20 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Input Sytem</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        for(i=0;i<5;i++){
-            
-            
-            
-            
-            
-            
+      let chance = 5;
+      for (i = 0; i < chance; i++) {
+        let guessNumber = parseInt(prompt("Enter a number between (1-5) "));
+        if (guessNumber <= 5) {
+          if (guessNumber == 3) {
+            console.log("You guessed it right");
+            break;
+          } else {
+            console.log("Wrong Guess try again");
+          }
+        } else {
+          console.log("invalid Input");
         }
+      }
+      if (chance == 6 && guessNumber != 3) {
+        console.log("GAME OVER");
+      }
     </script>
-</body>
+  </body>
 </html>
