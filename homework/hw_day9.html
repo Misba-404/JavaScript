@@ -12,20 +12,21 @@
         "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
       let badPattern = /bad|ugly|stupid/gi;
       let numberCheck = /\d+/g;
-      let capital=/[A-Z]/g
+      let capitalPattern = /[A-Z]\w*/g;
       console.log(comment.match(badPattern));
       console.log(comment.replace(badPattern, "***"));
 
-      console.log(comment.match(capital));
-      
-      
-      let numberCount = comment.match(numberCheck);
+      console.log(comment.match(capitalPattern));
+      let capitalCount = comment.match(capitalPattern);
       //   console.log("Type: "+typeof(numberCount));
       console.log(comment.match(numberCheck));
+      let numberCount = comment.match(numberCheck);
+
+      //   display Count
+      console.log("There are "+capitalCount.length+" capitalised words in the comment");
       console.log(
         "There are " + numberCount.length + " numbers mentioned in the comment",
       );
-
     </script>
   </body>
 </html>
