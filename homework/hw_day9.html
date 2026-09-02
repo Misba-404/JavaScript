@@ -15,7 +15,8 @@
         let numberCheck = /\d+/g;
         let capitalPattern = /[A-Z]\w*/g;
         console.log(comment.match(badPattern));
-        console.log(comment.replace(badPattern, "***"));
+        // console.log(comment.replace(badPattern, "***"));
+        let cleanedComment=comment.replace(badPattern,"***")
 
         console.log(comment.match(capitalPattern));
         let capitalCount = comment.match(capitalPattern);
@@ -23,6 +24,7 @@
         console.log(comment.match(numberCheck));
         let numberCount = comment.match(numberCheck);
 
+        console.log("Cleaned comment: "+cleanedComment);
         //   display Count
         console.log(
           "There are " +
