@@ -19,7 +19,7 @@
           ),
         );
         let quantity = Number(prompt("Enter quantity"));
-        console.log("before switch" + validPurchase);
+        // console.log("before switch" + validPurchase);
 
         switch (code) {
           case 1:
@@ -38,12 +38,17 @@
             console.log("Invalid code");
             continue;
         }
-
+        price = price * quantity;
         totalPrice += price;
         console.log("Total Price :" + totalPrice);
 
         validPurchase += 1;
-        console.log("after purchase" + validPurchase);
+        // console.log("after purchase" + validPurchase);
+      }
+      if (totalPrice > 100) {
+        console.log("High price");
+      } else {
+        console.log("Low Price");
       }
     </script>
   </body>
