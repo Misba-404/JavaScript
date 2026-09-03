@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    <title>Json to object</title>
+  </head>
+  <body>
+    <script>
+      const userFeedback = `{"message":"The hospitality and service provided was very nice Thank you very much"}`;
+      //   for trycatch later
+      let converted = JSON.parse(userFeedback);
+      //
+      let messageOut = converted.message;
+      const checkThank = (string) => {
+        let pattern = /Thank/gi;
+        let checkStatus = pattern.test(string);
+        if(checkStatus==true){
+            console.log("Positive feedback recieved");
+        }else{
+            console.log("Feedback Noted");
+        }
+      };
+      checkThank(messageOut)
+    </script>
+  </body>
+</html>
