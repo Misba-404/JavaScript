@@ -9,20 +9,25 @@
   <body>
     <script>
       const userFeedback = `{"message":"The hospitality and service provided was very nice Thank you very much"}`;
-      //   for trycatch later
-      let converted = JSON.parse(userFeedback);
       //
-      let messageOut = converted.message;
+      let pattern = /Thank/gi;
+      //   fn
       const checkThank = (string) => {
-        let pattern = /Thank/gi;
         let checkStatus = pattern.test(string);
-        if(checkStatus==true){
-            console.log("Positive feedback recieved");
-        }else{
-            console.log("Feedback Noted");
+        if (checkStatus == true) {
+          console.log("Positive feedback recieved");
+        } else {
+          console.log("Feedback Noted");
         }
       };
-      checkThank(messageOut)
+      //   try catch
+      try {
+        const converted = JSON.parse(userFeedback);
+        const messageOut = converted.message;
+        checkThank(messageOut);
+      } catch (err) {
+        console.log(`Eroor occured is: ${err.message}`);
+      }
     </script>
   </body>
 </html>
