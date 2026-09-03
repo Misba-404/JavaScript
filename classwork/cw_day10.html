@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    <title>JSON converter</title>
+  </head>
+  <body>
+    <script>
+      let person =
+        '{"name":"misabahudeen","email":"misabah.in05@gmail.com","message":"this is a test message"}';
+
+      let converted = JSON.parse(person);
+      console.log(person);
+      console.log(converted);
+
+      const messageOut = (object) => object.name;
+
+      try {
+        let converted = JSON.parse(person);
+      } catch (err) {
+        console.log(`The error message is ${err}`);
+      }
+      console.log("Message recieved from " + messageOut(converted));
+    </script>
+  </body>
+</html>
