@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      let person =
+      const person =
         '{"name":"misabahudeen","email":"misabah.in05@gmail.com","message":"this is a test message"}';
 
       // let converted = JSON.parse(person);
@@ -16,7 +16,7 @@
       const messageOut = (object) => object.name;
 
       try {
-        let converted = JSON.parse(person);
+        const converted = JSON.parse(person);
         console.log(converted);
         console.log("Message recieved from " + messageOut(converted));
       } catch (err) {
