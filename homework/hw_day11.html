@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      class user {
+      class User {
         constructor(name, age, email) {
           this.name = name;
           this.age = age;
@@ -17,7 +17,7 @@
         get nameAge() {
           return `Name: ${this.name}, Age:${this.age}`;
         }
-        setEmail(newEmail) {
+        set Email(newEmail) {
           let pattern = /@/g;
           // console.log(`check pattern:  ${pattern.test("email.com")}`);
           if (pattern.test(newEmail) == true) {
@@ -28,11 +28,11 @@
           return `Name is :${this.name} age is ${this.age} email: ${this.email}`;
         }
       }
-      const user1 = new user("Misbah", 21, "default@example.com");
+      const user1 = new User("Misbah", 21, "default@example.com");
       console.log(user1.nameAge);
-      user1.setEmail("emailWithoutAt.com"); //without @
+      user1.Email = "emailWithoutAt.com"; //without @
       console.log("check email update 1: " + user1.fullDetails);
-      user1.setEmail("emailWith@gmail.com"); //With @
+      user1.Email = "emailWith@gmail.com"; //With @
       console.log("check email updaet 2: " + user1.fullDetails);
     </script>
   </body>
