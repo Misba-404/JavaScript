@@ -4,11 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="#" />
-    <title>Book Info</title>
+    <title>User system</title>
   </head>
   <body>
     <script>
-      
+      class user {
+        constructor(name, age, email) {
+          this.name = name;
+          this.age = age;
+          this.email = email;
+        }
+        get nameAge() {
+          return `Name: ${this.name}, Age:${this.age}`;
+        }
+        setEmail(newEmail) {
+          let pattern = /@/g;
+          // console.log(`check pattern:  ${pattern.test("email.com")}`);
+          if (pattern.test(newEmail) == true) {
+            this.email = newEmail;
+          }
+        }
+        get fullDetails() {
+          return `Name is :${this.name} age is ${this.age} email: ${this.email}`;
+        }
+      }
+      const user1 = new user("Misbah", 21, "default@example.com");
+      console.log(user1.nameAge);
+      user1.setEmail("emailWithoutAt.com"); //without @
+      console.log("check email update 1: " + user1.fullDetails);
+      user1.setEmail("emailWith@gmail.com"); //With @
+      console.log("check email updaet 2: " + user1.fullDetails);
     </script>
   </body>
 </html>
