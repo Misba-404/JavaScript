@@ -7,17 +7,36 @@
     <title>Document</title>
   </head>
   <body>
-    <script >
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
       class book {
         constructor(title, author, price) {
           this.title = title;
           this.author = author;
           this.price = price;
         }
-        
+
+        get info() {
+          return `Title: ${this.title} Author: ${this.author}`;
+        }
+        get fullDetails() {
+          return `Title: ${this.title} Author: ${this.author} Price: ${this.price}`;
+        }
+
+        set setPrice(newPrice) {
+          if (typeof newPrice === "number" && newPrice > 0) {
+            this.price = newPrice;
+          } else {
+            console.log("error occured");
+          }
+        }
       }
       const book1 = new book("Alchemist", "pauloCohelo", "75");
-      console.log(book1.displayBookInfo());
+      // console.log(book1.displayBookInfo());
+      document.getElementById("demo").innerHTML = book1.info;
+      book1.setPrice = 200;
+      document.getElementById("demo2").innerHTML = book1.fullDetails;
     </script>
   </body>
 </html>
