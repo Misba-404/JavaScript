@@ -24,6 +24,7 @@
       try {
         const converted = JSON.parse(userFeedback);
         const messageOut = converted.message;
+        console.log(messageOut);
         checkThank(messageOut);
       } catch (err) {
         console.log(`Eroor occured is: ${err.message}`);
