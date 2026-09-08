@@ -12,20 +12,40 @@
       <input type="text" id="name" placeholder="Your full name here" /><br />
       <label for="textbox">Enter your comments Below:</label><br />
       <textarea
-        name="textbox"
         id="textbox"
         placeholder="Enter Your Feedbacks Here..."
       ></textarea
       ><br />
-      <input type="submit" />
       <button id="btn" type="submit">submit</button>
     </form>
     <br />
     <p id="demo1"></p>
     <p id="demo2"></p>
+    <p id="message"></p>
     <script>
       let form = document.getElementById("form1");
-      button.addEventListener("submit", );
+      //   shprtcut for doc.gete]ElbyId
+      let message = document.getElementById("message");
+      let demo1 = document.getElementById("demo1");
+      let demo2 = document.getElementById("demo2");
+      form.addEventListener("submit", function () {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let feedback = document.getElementById("textbox").value;
+        document.getElementById("demo1").innerHTML = `Name: ${name}`;
+        document.getElementById("demo2").innerHTML = `Feedback: ${feedback}`;
+        message.innerHTML = "Thanks for your feedback";
+        message.style.color = "green";
+        setTimeout(function () {
+          message.innerHTML = "";
+        }, 5000);
+      });
+      demo2.addEventListener("mouseover", function () {
+        demo2.style.color = "blue";
+      });
+      demo2.addEventListener("mouseout", function () {
+        demo2.style.color = "black";
+      });
     </script>
   </body>
 </html>
