@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Last digit</title>
+  </head>
+  <body>
+    <script>
+      const num1 = Number(prompt("Enter First number"));
+      const num2 = Number(prompt("Enter Second number"));
+      const num3 = Number(prompt("Enter Third number"));
+      let result1 = num1 % 10;
+      let result2 = num2 % 10;
+      let result3 = num3 % 10;
+    //   console.log(` res1:${result1} res2:${result2} res3:${result3}`);
+      if (result1 == result2 && result1 == result3) {
+        console.log("The last Digits of all the Entered Numbers are same");
+      } else {
+        console.log("the last Digits of the Entered Numberes are not same");
+      }
+    </script>
+  </body>
+</html>
