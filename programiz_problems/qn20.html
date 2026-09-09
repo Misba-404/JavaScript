@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator(if else)</title>
+  </head>
+  <body>
+    <script>
+      let operator = prompt("Enter an operator ( + , - , * , /)");
+      // console.log(typeof(operator));
+      const num1 = Number(prompt("Enter the first number:"));
+      const num2 = Number(prompt("Enter the second number:"));
+
+      if (operator == "+") {
+        console.log(`${num1} + ${num2} = ${num1 + num2}`);
+      } else if (operator == "-") {
+        console.log(`${num} - ${num2} = ${num1 - num2}`);
+      } else if (operator == "*") {
+        console.log(`${num1} x ${num2} = ${num1 * num2}`);
+      } else if (operator == "/") {
+        console.log(`${num1} / ${num2} = ${num1 / num2}`);
+      } else {
+        console.log(`Invalid operaator Entered`);
+      }
+    </script>
+  </body>
+</html>
